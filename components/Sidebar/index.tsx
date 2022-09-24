@@ -6,7 +6,8 @@ import HomeIcon from '@mui/icons-material/Home'
 import LogoutIcon from '@mui/icons-material/Logout'
 import MessageIcon from '@mui/icons-material/Message'
 import SettingsIcon from '@mui/icons-material/Settings'
-import { Drawer, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Badge, Drawer, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import Logo from '../Logo'
 
 interface SidebarProps {
   drawerWidth: number
@@ -22,59 +23,65 @@ export default function Sidebar({ drawerWidth }: SidebarProps) {
         '& .MuiDrawer-paper': {
           boxSizing: 'border-box',
           width: drawerWidth,
-          backgroundColor: 'black',
-          color: 'white',
+          backgroundColor: '#e4e4e4',
+          border: 'none',
         },
       }}
     >
-      <List component="nav" sx={{ width: '100%', maxWidth: 240, paddingTop: 20, paddingLeft: 2 }}>
+      <Logo></Logo>
+      <List component="nav" sx={{ width: '100%', maxWidth: 240, paddingTop: 4, paddingLeft: 2 }}>
         <ListItemButton>
           <ListItemIcon>
-            <HomeIcon sx={{ color: 'white' }} />
+            <HomeIcon />
           </ListItemIcon>
-          <ListItemText primary="Home" color="white" />
+          <ListItemText primary="Home" />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <ArticleIcon sx={{ color: 'white' }} />
+            <ArticleIcon />
           </ListItemIcon>
-          <ListItemText primary="Projects" color="white" />
+          <ListItemText primary="Projects" />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <AppsIcon sx={{ color: 'white' }} />
+            <AppsIcon />
           </ListItemIcon>
-          <ListItemText primary="Dashboard" color="white" />
+          <ListItemText primary="Dashboard" />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <MessageIcon sx={{ color: 'white' }} />
+            <MessageIcon />
           </ListItemIcon>
-          <ListItemText primary="Messages" color="white" />
+          <ListItemText
+            primary="Messages"
+            secondary={<Badge badgeContent={6} color="error" />}
+            primaryTypographyProps={{ component: 'span', display: 'inline' }}
+            secondaryTypographyProps={{ component: 'span', display: 'inline', paddingLeft: '2rem' }}
+          />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <FolderIcon sx={{ color: 'white' }} />
+            <FolderIcon />
           </ListItemIcon>
-          <ListItemText primary="Documents" color="white" />
+          <ListItemText primary="Documents" />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <BusinessIcon sx={{ color: 'white' }} />
+            <BusinessIcon />
           </ListItemIcon>
           <ListItemText primary="Organization" color="white" />
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-            <SettingsIcon sx={{ color: 'white' }} />
+            <SettingsIcon />
           </ListItemIcon>
-          <ListItemText primary="Settings" color="white" />
+          <ListItemText primary="Settings" />
         </ListItemButton>
         <ListItemButton sx={{ paddingTop: 20 }}>
           <ListItemIcon>
-            <LogoutIcon sx={{ color: 'white' }} />
+            <LogoutIcon />
           </ListItemIcon>
-          <ListItemText primary="Logout" color="white" />
+          <ListItemText primary="Logout" />
         </ListItemButton>
       </List>
     </Drawer>

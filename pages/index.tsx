@@ -1,8 +1,8 @@
-import { Container } from '@mui/system'
 import type { NextPage } from 'next'
+import Profile from './profile'
 
 const Home: NextPage = () => {
-  return <Container></Container>
+  return <Profile></Profile>
 }
 
 export default Home

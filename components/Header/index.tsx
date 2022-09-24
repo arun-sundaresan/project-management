@@ -8,7 +8,7 @@ export default function Header() {
       <Grid item>
         <Typography variant="h6">Good Morning, Arun</Typography>
         <Typography variant="subtitle2" color="GrayText">
-          April 28, 2022
+          {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date())}
         </Typography>
       </Grid>
       <Grid item display="flex" gap={1} alignItems="center">
@@ -16,7 +16,7 @@ export default function Header() {
           <Button
             variant="contained"
             startIcon={<AddIcon />}
-            sx={{ backgroundColor: 'red', color: 'white' }}
+            sx={{ backgroundColor: '#d32f2f', color: 'white' }}
             size="small"
           >
             Add Project
@@ -24,7 +24,7 @@ export default function Header() {
         </Grid>
         <Grid item display="flex" alignItems="center" gap={1}>
           <Grid item>
-            <Avatar variant="square" sx={{ borderRadius: '0.5rem' }}>
+            <Avatar variant="square" sx={{ borderRadius: '0.5rem' }} src="/profile_image.jpg">
               A
             </Avatar>
           </Grid>
@@ -32,7 +32,7 @@ export default function Header() {
             <Box minWidth="100px">
               <Typography fontSize="1rem">Arun</Typography>
               <Typography fontSize="0.75rem" color="GrayText">
-                April 28, 2022
+                {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date())}
               </Typography>
             </Box>
             <ArrowDropDownIcon />
