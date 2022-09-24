@@ -1,8 +1,8 @@
-import { Container } from "@mui/system";
-import type { NextPage } from "next";
+import { Container } from '@mui/system'
+import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
-  return <Container></Container>;
-};
+  return <Container></Container>
+}
 
-export default Home;
+export default Home

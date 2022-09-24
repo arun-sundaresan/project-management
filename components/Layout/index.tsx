@@ -1,12 +1,12 @@
-import { Box, Grid } from "@mui/material";
-import { ReactNode } from "react";
-import Header from "../Header";
-import Sidebar from "../Sidebar";
+import { Box, Grid } from '@mui/material'
+import { ReactNode } from 'react'
+import Header from '../Header'
+import Sidebar from '../Sidebar'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
         component="main"
         sx={{
           flexGrow: 1,
-          boxSizing: "border-box",
+          boxSizing: 'border-box',
           paddingLeft: `${drawerWidth}px`,
         }}
       >
@@ -25,5 +25,5 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </Box>
     </Grid>
-  );
+  )
 }

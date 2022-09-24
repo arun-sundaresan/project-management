@@ -1,6 +1,6 @@
-import AddIcon from "@mui/icons-material/Add";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import { Avatar, Box, Button, Grid, Typography } from '@mui/material'
 
 export default function Header() {
   return (
@@ -16,7 +16,7 @@ export default function Header() {
           <Button
             variant="contained"
             startIcon={<AddIcon />}
-            sx={{ backgroundColor: "red", color: "white" }}
+            sx={{ backgroundColor: 'red', color: 'white' }}
             size="small"
           >
             Add Project
@@ -24,7 +24,7 @@ export default function Header() {
         </Grid>
         <Grid item display="flex" alignItems="center" gap={1}>
           <Grid item>
-            <Avatar variant="square" sx={{ borderRadius: "0.5rem" }}>
+            <Avatar variant="square" sx={{ borderRadius: '0.5rem' }}>
               A
             </Avatar>
           </Grid>
@@ -40,5 +40,5 @@ export default function Header() {
         </Grid>
       </Grid>
     </Grid>
-  );
+  )
 }
