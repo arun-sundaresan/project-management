@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
         sx={{
           flexGrow: 1,
           boxSizing: 'border-box',
-          paddingLeft: `${drawerWidth}px`,
+          paddingLeft: { sm: `${drawerWidth}px`, xs: '1rem' },
         }}
       >
         <Header></Header>

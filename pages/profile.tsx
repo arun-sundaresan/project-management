@@ -43,11 +43,19 @@ export default function Profile() {
 
   return (
     <Grid container>
-      <Grid item container padding={4} md={8}>
+      <Grid item container padding={{ md: 4, xs: 1 }} md={8}>
         <Grid item md={12}>
           <Typography variant="h6">My Profile</Typography>
         </Grid>
-        <Grid item container padding={4} display="flex" justifyContent="space-between" wrap="wrap" rowGap={4}>
+        <Grid
+          item
+          container
+          padding={{ md: 4, xs: 1 }}
+          display="flex"
+          justifyContent="space-between"
+          wrap="wrap"
+          rowGap={4}
+        >
           <Grid item md={6}>
             <FormControl variant="standard">
               <TextField
@@ -182,7 +190,7 @@ export default function Profile() {
             </FormControl>
           </Grid>
         </Grid>
-        <Grid item container display="flex" justifyContent="center" gap={1} md={12} padding={8}>
+        <Grid item container display="flex" justifyContent="center" gap={1} md={12} padding={{ md: 8, xs: 2 }}>
           <Button variant="outlined" sx={{ borderColor: '#ed6c02', color: '#ed6c02' }} onClick={resetChanges}>
             Reset Changes
           </Button>
@@ -196,9 +204,9 @@ export default function Profile() {
           <Image src="/profile_image.jpg" width={150} height={150} alt="Profile" style={{ borderRadius: 8 }}></Image>
         </Grid>
         <Grid textAlign="center">
-          <Typography variant="h6">{`${user.profile.firstName} ${user.profile.lastName}`}</Typography>
+          <Typography variant="h6">{`${user.profile.firstName || 'User'} ${user.profile.lastName || ''}`}</Typography>
           <Typography variant="subtitle2" color="GrayText">
-            {user.profile.email}
+            {user.profile.email || 'mail@address.com'}
           </Typography>
         </Grid>
       </Grid>

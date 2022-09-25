@@ -7,9 +7,9 @@ export default function Header() {
   const user = useUSerContext()
 
   return (
-    <Grid display="flex" justifyContent="space-between" padding={2}>
+    <Grid container display="flex" justifyContent="space-between" padding={2} rowGap={{ md: 0, xs: 2 }}>
       <Grid item>
-        <Typography variant="h6">{`Good Morning, ${user.profile.firstName}`}</Typography>
+        <Typography variant="h6">{`Good Morning, ${user.profile.firstName || 'User'}`}</Typography>
         <Typography variant="subtitle2" color="GrayText">
           {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date())}
         </Typography>
@@ -33,7 +33,7 @@ export default function Header() {
           </Grid>
           <Grid item display="flex" alignItems="center">
             <Box minWidth="100px">
-              <Typography fontSize="1rem">{user.profile.firstName}</Typography>
+              <Typography fontSize="1rem">{user.profile.firstName || 'User'}</Typography>
               <Typography fontSize="0.75rem" color="GrayText">
                 Project Manager
               </Typography>
