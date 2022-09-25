@@ -77,7 +77,7 @@ export default function Sidebar({ drawerWidth }: SidebarProps) {
           </ListItemIcon>
           <ListItemText primary="Settings" />
         </ListItemButton>
-        <ListItemButton sx={{ paddingTop: 20 }}>
+        <ListItemButton sx={{ marginTop: 20 }}>
           <ListItemIcon>
             <LogoutIcon />
           </ListItemIcon>

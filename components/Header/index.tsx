@@ -1,12 +1,15 @@
 import AddIcon from '@mui/icons-material/Add'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import { Avatar, Box, Button, Grid, Typography } from '@mui/material'
+import { useUSerContext } from '../../contexts/user'
 
 export default function Header() {
+  const user = useUSerContext()
+
   return (
     <Grid display="flex" justifyContent="space-between" padding={2}>
       <Grid item>
-        <Typography variant="h6">Good Morning, Arun</Typography>
+        <Typography variant="h6">{`Good Morning, ${user.profile.firstName}`}</Typography>
         <Typography variant="subtitle2" color="GrayText">
           {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date())}
         </Typography>
@@ -30,9 +33,9 @@ export default function Header() {
           </Grid>
           <Grid item display="flex" alignItems="center">
             <Box minWidth="100px">
-              <Typography fontSize="1rem">Arun</Typography>
+              <Typography fontSize="1rem">{user.profile.firstName}</Typography>
               <Typography fontSize="0.75rem" color="GrayText">
-                {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date())}
+                Project Manager
               </Typography>
             </Box>
             <ArrowDropDownIcon />
