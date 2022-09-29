@@ -36,9 +36,7 @@ export default function Profile() {
   }
 
   const resetChanges = () => {
-    axios.get('/api/profile/read').then((response) => {
-      user.updateProfile(response.data)
-    })
+    setProfile(user.profile)
   }
 
   return (
@@ -204,9 +202,9 @@ export default function Profile() {
           <Image src="/profile_image.jpg" width={150} height={150} alt="Profile" style={{ borderRadius: 8 }}></Image>
         </Grid>
         <Grid textAlign="center">
-          <Typography variant="h6">{`${user.profile.firstName || 'User'} ${user.profile.lastName || ''}`}</Typography>
+          <Typography variant="h6">{`${profile.firstName || 'User'} ${profile.lastName || ''}`}</Typography>
           <Typography variant="subtitle2" color="GrayText">
-            {user.profile.email || 'mail@address.com'}
+            {profile.email || 'mail@address.com'}
           </Typography>
         </Grid>
       </Grid>
